@@ -17,7 +17,7 @@
               Formularios
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ route('form-datos-personales') }}">Datos Personales</a></li>
+              <li><a class="dropdown-item" href="{{ route('hombre-show', 1) }}">Mi perfil</a></li>
               <li><a class="dropdown-item" href="{{ route('form-primero') }}">Primer Ingreso</a></li>
               <li><a class="dropdown-item" href="{{ route('form-segundo') }}">15 - 20 sesiones</a></li>
               <li><a class="dropdown-item" href="{{ route('form-tercero') }}">30 - 35 sesiones</a></li>

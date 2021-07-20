@@ -17,10 +17,10 @@ class CreateFormPrimerosTable extends Migration
         Schema::create('form_primeros', function (Blueprint $t) {//tabla
             $t->id();
             $t->timestamps();
-            $t->foreignId('hombre_id')->references('id')->on('users');
-            
             // ¿Cuál es tu estado civil? *
             $t->enum('estado_civil',                ['soltero', 'casado', 'union_libre', 'divorciado', 'viudo']);
+            $t->boolean('tiene_pareja')->nullable();        // ¿Tiene pareja en este momento?,
+            $t->boolean('vive_con_ella')->nullable();       // ¿Si tiene pareja, está conviviendo con ella?,
             //¿Fue referido por alguna institución pública (PANI, Poder Judicial, etc)?,
             $t->boolean('referido');
             // ¿Se enteró de Wem por algunas de las siguientes opciones? 

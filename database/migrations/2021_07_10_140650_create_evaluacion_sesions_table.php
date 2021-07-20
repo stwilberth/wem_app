@@ -16,7 +16,6 @@ class CreateEvaluacionSesionsTable extends Migration
         Schema::create('evaluacion_sesions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            
             $table->foreignId('hombre_id')->references('id')->on('users');;
             $table->tinyInteger('individualmente');     // individualmente (bienestar personal) 
             $table->tinyInteger('con_otras_personas');  // con_otras_personas (familia y relaciones próximas) *

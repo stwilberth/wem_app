@@ -1,0 +1,82 @@
+id,provincia_id,codigo,canton
+1,1,01,San José
+2,1,02,Escazú
+3,1,03,Desamparados
+4,1,04,Puriscal
+5,1,05,Tarrazú
+6,1,06,Aserrí
+7,1,07,Mora
+8,1,08,Goicoechea
+9,1,09,Santa Ana
+10,1,10,Alajuelita
+11,1,11,Vásquez de Coronado
+12,1,12,Acosta
+13,1,13,Tibás
+14,1,14,Moravia
+15,1,15,Montes de Oca
+16,1,16,Turrubares
+17,1,17,Dota
+18,1,18,Curridabat
+19,1,19,Pérez Zeledón
+20,1,20,León Cortéz Castro
+21,2,01,Alajuela
+22,2,02,San Ramón
+23,2,03,Grecia
+24,2,04,San Mateo
+25,2,05,Atenas
+26,2,06,Naranjo
+27,2,07,Palmares
+28,2,08,Poás
+29,2,09,Orotina
+30,2,10,San Carlos
+31,2,11,Zarcero
+32,2,12,Valverde Vega
+33,2,13,Upala
+34,2,14,Los Chiles
+35,2,15,Guatuso
+36,3,01,Cartago
+37,3,02,Paraíso
+38,3,03,La Unión
+39,3,04,Jiménez
+40,3,05,Turrialba
+41,3,06,Alvarado
+42,3,07,Oreamuno
+43,3,08,El Guarco
+44,4,01,Heredia
+45,4,02,Barva
+46,4,03,Santo Domingo
+47,4,04,Santa Bárbara
+48,4,05,San Rafaél
+49,4,06,San Isidro
+50,4,07,Belén
+51,4,08,Flores
+52,4,09,San Pablo
+53,4,10,Sarapiquí
+54,5,01,Liberia
+55,5,02,Nicoya
+56,5,03,Santa Cruz
+57,5,04,Bagaces
+58,5,05,Carrillo
+59,5,06,Cañas
+60,5,07,Abangáres
+61,5,08,Tilarán
+62,5,09,Nandayure
+63,5,10,La Cruz
+64,5,11,Hojancha
+65,6,01,Puntarenas
+66,6,02,Esparza
+67,6,03,Buenos Aires
+68,6,04,Montes de Oro
+69,6,05,Osa
+70,6,06,Aguirre
+71,6,07,Golfito
+72,6,08,Coto Brus
+73,6,09,Parrita
+74,6,10,Corredores
+75,6,11,Garabito
+76,7,01,Limón
+77,7,02,Pococí
+78,7,03,Siquirres
+79,7,04,Talamanca
+80,7,05,Matina
+81,7,06,Guácimo
