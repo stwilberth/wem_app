@@ -16,6 +16,7 @@ class CreateHombresTable extends Migration
         Schema::create('hombres', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('pin');
 
             $table->string('tipo_identificacion')->nullable();  //tipo identificacion segun hacienda
             $table->string('dni')->unique()->nullable();        // Digite su cédula,

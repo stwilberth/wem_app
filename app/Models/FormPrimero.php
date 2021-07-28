@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class FormPrimero extends Model
 {
     use HasFactory;
+
+    public function hombre()
+    {
+        return $this->hasOne(Hombre::class);
+    }
 }

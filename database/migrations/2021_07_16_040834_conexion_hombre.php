@@ -26,15 +26,15 @@ class ConexionHombre extends Migration
         });
 
         Schema::table('form_primeros', function (Blueprint $table) {
-            $table->foreignId('hombre_id')->constrained();  
+            $table->foreignId('hombre_id')->unique()->constrained();  
         });
 
         Schema::table('form_segundos', function (Blueprint $table) {
-            $table->foreignId('hombre_id')->constrained();  
+            $table->foreignId('hombre_id')->unique()->constrained();  
         });
 
         Schema::table('form_terceros', function (Blueprint $table) {
-            $table->foreignId('hombre_id')->constrained();  
+            $table->foreignId('hombre_id')->unique()->constrained();  
         });
 
         Schema::table('sesiones', function (Blueprint $table) {

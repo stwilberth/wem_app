@@ -36,4 +36,9 @@ class Hombre extends Model
         'barrio', 
         'grupo_id'
     ];
+
+    public function formPrimero()
+    {
+        return $this->hasOne(FormPrimero::class);
+    }
 }

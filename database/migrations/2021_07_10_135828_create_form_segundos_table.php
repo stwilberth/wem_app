@@ -16,7 +16,6 @@ class CreateFormSegundosTable extends Migration
         Schema::create('form_segundos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->enum('form_estado',                      ['sin_iniciar', 'editando', 'finalizado'])->default('sin_iniciar');
 
             $table->boolean('tiene_pareja')              ->nullable(); //radio_boolean
             $table->boolean('esta_conviviendo_pareja')   ->nullable(); //radio_boolean
