@@ -7,6 +7,8 @@ Route::middleware(['role:admin'])->group(function () {
     Route::get('/hombre-show/{id}',     App\Http\Livewire\Hombre\HombreShowCtrl::class)                  ->name('dashboard-hombre-show');
     Route::get('/user-show/{id}',       App\Http\Livewire\UserShowCtrl::class)                    ->name('user-show');
     Route::get('/dashboard',            App\Http\Livewire\DashboardCtrl::class)                   ->name('dashboard');
+    Route::get('/grupos',               App\Http\Livewire\Grupos\Index::class)                    ->name('grupos');
+    Route::get('/grupo/{id}',           App\Http\Livewire\Grupos\Show::class)                     ->name('grupo');
     // Route::get('/hombre-list',          App\Http\Livewire\Hombre\HombreListCtrl::class)                  ->name('dashboard-hombre-list');
     Route::get('/result-asistencia',    App\Http\Livewire\Forms\ResultAsistencia::class)          ->name('result-asistencia');
     Route::get('/result-primero',       App\Http\Livewire\Forms\ResultPrimero::class)             ->name('result-primero');

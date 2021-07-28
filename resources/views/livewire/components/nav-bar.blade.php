@@ -11,7 +11,7 @@
               <a class="nav-link" href="{{ route('dashboard') }}">Tablero</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('dashboard') }}">Grupos</a>
+              <a class="nav-link" href="{{ route('grupos') }}">Grupos</a>
             </li>
           @endif
 
