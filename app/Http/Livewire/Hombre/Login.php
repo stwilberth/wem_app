@@ -5,7 +5,7 @@ namespace App\Http\Livewire\Hombre;
 use Livewire\Component;
 use App\Models\Hombre;
 
-class HombreLogin extends Component
+class Login extends Component
 {
     public $dni;
     public $pin;

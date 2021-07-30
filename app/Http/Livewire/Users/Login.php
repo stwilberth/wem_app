@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Users;
 
 use Livewire\Component;
 
-class UserLoginCtrl extends Component
+class Login extends Component
 {
     public function render()
     {
-        return view('livewire.user-login')
+        return view('livewire.users.login')
         ->extends('layouts.app')
         ->section('content')
         ->layoutData([

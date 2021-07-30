@@ -13,26 +13,28 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <table class="table">
-                        <thead>
-                          <tr>
-                            <th scope="col">name</th>
-                            <th scope="col">email</th>
-                            <th scope="col">activo</th>
-                            <th scope="col">password</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($users as $user)                        
-                                <tr>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->activo }}</td>
-                                    <td>********</td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">name</th>
+                                <th scope="col">email</th>
+                                <th scope="col">activo</th>
+                                <th scope="col">password</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($users as $user)                        
+                                    <tr>
+                                        <td>{{ $user->name }}</td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>{{ $user->activo }}</td>
+                                        <td>********</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

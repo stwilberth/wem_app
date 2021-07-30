@@ -14,7 +14,7 @@ use App\Models\Pais;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 
-class HombreCreateCtrl extends Component
+class Create extends Component
 {
     public $dni;
     public $tipo_identificacion;

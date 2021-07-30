@@ -2,24 +2,34 @@
 
 namespace App\Http\Livewire\Hombre;
 use App\Models\Hombre;
-use Illuminate\Support\Facades\DB;
-
 use Livewire\Component;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
-class HombreShowCtrl extends Component
+class Show extends Component
 {
     public $hombre;
-
     public $hombre_id;
 
-    public function mount()
+    public function mount($id)
     {
 
-        if (!session()->get('hombre_id')) {
-            return redirect()->route('welcome');
+        if (Auth::user()) {
+            if (Auth::user()->hasRole('psicologo') || Auth::user()->hasRole('admin')) {
+                $this->hombre_id = $id;
+            } else {
+                return redirect()->route('welcome');
+            }
+        } else {
+            if (session('hombre_id')) {
+                $this->hombre_id = session('hombre_id');
+            } else {
+                return redirect()->route('welcome');
+            }
         }
+        
+        
 
-        $this->hombre_id = session()->get('hombre_id');
 
         $hombre = DB::table('hombres')
         ->leftJoin('grupos', 'hombres.grupo_id', '=', 'grupos.id')

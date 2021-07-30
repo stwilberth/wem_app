@@ -5,12 +5,9 @@
             <div class="card mt-5">
                 <div class="card-header"><h4>{{ $grupo->name }}</h4></div>
                 <div class="card-body">
-
+                    <x-grupos.table_show :grupo="$grupo" />
                 </div>
             </div>
         </div>
-    </div>
-    
-    {{-- hombres --}}
-    @livewire('hombre.list-comp', ['grupo_id' => $grupo->id])
+    </div>    
 </div>
