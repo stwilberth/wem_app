@@ -44,8 +44,12 @@
                         <span class="text-primary"> {{ $hombre['total_sesiones'] }} </span>
                     </li>
                     <li class="list-group-item">
-                        <span class="text-uppercase fw-bold">Asistencias del mes: </span> 
+                        <span class="text-uppercase fw-bold">Asistencias del mes actual: </span> 
                         <span class="text-primary"> {{ $hombre['asistencias'] }} </span>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="text-uppercase fw-bold">Asistencias del mes anterior: </span> 
+                        <span class="text-primary"> {{ $hombre['asistencias_anterior'] }} </span>
                     </li>
                     <li class="list-group-item">
                         <span class="text-uppercase fw-bold">Grupo de Wem: </span> 
@@ -58,6 +62,10 @@
                     <li class="list-group-item">
                         <span class="text-uppercase fw-bold">Teléfono: </span> 
                         <a href="tel:{{ $hombre['telefono'] }}">{{ $hombre['telefono'] }}</a>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="text-uppercase fw-bold">WhatsApp:</span> 
+                        <a class="text-success" href="https://wa.me/{{ $hombre['telefono'] }}">Enviar Mensaje</a>
                     </li>
                     <li class="list-group-item">
                         <span class="text-uppercase fw-bold">Estado civil: </span> 
@@ -187,9 +195,9 @@
                         <span class="text-primary"> {{ $hombre['barrio_name'] }} </span>
                     </li>
                 </ul>
-                {{-- <div class="card-body">
-                  <a href="#" class="btn btn-primary">Editar</a>
-                </div> --}}
+                <div class="card-body">
+                  <a href="{{ route('hombre-edit', $hombre['id']) }}" class="btn btn-primary">Editar</a>
+                </div>
               </div>
         </div>
     </div>

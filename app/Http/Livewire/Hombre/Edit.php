@@ -55,7 +55,7 @@ class Edit extends Component
 
     public function render()
     {
-        return view('livewire.hombre.show')
+        return view('livewire.hombre.edit')
             ->extends('layouts.app')
             ->section('content')
             ->layoutData(['titulo' => $this->hombre['name'], 'body_class' => '' ]);

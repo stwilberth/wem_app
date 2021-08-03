@@ -8,13 +8,13 @@
             <x-sidebar.link label="Grupos"      route="grupos"      icon="folder" />
             <x-sidebar.link label="Hombres"     route="hombres"     icon="users" />
             <x-sidebar.link label="Usuarios"    route="users"       icon="users" />
-            <x-sidebar.link label="asistencia"  route="reports-asistencia"  icon="check-square" />
+            <x-sidebar.link label="Asistencia"  route="reports-asistencia"  icon="check-square" />
         @endrole
 
         @role('psicologo')
           <x-sidebar.link label="Mis Grupos"  route="grupos"      icon="folder" />
           <x-sidebar.link label="Hombres"     route="hombres"     icon="users" />            
-          <x-sidebar.link label="asistencia"  route="reports-asistencia"  icon="check-square" />            
+          <x-sidebar.link label="Asistencia"  route="reports-asistencia"  icon="check-square" />            
         @endrole
 
         <li class="nav-item">
@@ -25,12 +25,12 @@
         </li>
       </ul>
 
-      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+      {{-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
         <span>Crear Enlace Asistencia</span>
         <span class="link-secondary" aria-label="Crear enlace de asistencia" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <span data-feather="plus-circle"></span>
         </span>
-      </h6>
+      </h6> --}}
       {{-- <ul class="nav flex-column mb-2">
         <li class="nav-item">
           <a class="nav-link" href="#">

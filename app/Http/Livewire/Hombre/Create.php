@@ -81,7 +81,6 @@ class Create extends Component
             'hombres.ocupacion'              => 'string|required',            // ¿Cuál es su ocupación?,
             'hombres.nacionalidad'           => 'string|required',         // ¿Cuál es su nacionalidad?,
             'hombres.total_sesiones'         => 'integer|required',      // Cantidad de sesiones de venir a Wem (digite un número),
-            // 'hombres.asistencias'            => 'integer|required',         // Cantidad de asistencias obligatovias, permite reestablecer en 0,
             'hombres.provincia'              => ['required', Rule::notIn(['provincia'])],           // Provincia,
             'hombres.canton'                 => ['required', Rule::notIn(['canton'])],             // Cantón,
             'hombres.distrito'               => 'nullable',            // Distrito,
@@ -180,7 +179,6 @@ class Create extends Component
 
         $this->validate();
         
-        $this->hombres->asistencias = 1;
         $this->hombres->form_primero = 'sin_iniciar';
         $this->hombres->form_segundo = 'sin_iniciar';
         $this->hombres->form_tercero = 'sin_iniciar';

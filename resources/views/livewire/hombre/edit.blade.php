@@ -19,10 +19,10 @@
                         <span class="text-uppercase fw-bold">Cantidad de sesiones: </span> 
                         <span class="text-primary"> {{ $hombre['total_sesiones'] }} </span>
                     </li>
-                    <li class="list-group-item">
+                    {{-- <li class="list-group-item">
                         <span class="text-uppercase fw-bold">Asistencias del mes: </span> 
                         <span class="text-primary"> {{ $hombre['asistencias'] }} </span>
-                    </li>
+                    </li> --}}
                     <li class="list-group-item">
                         <span class="text-uppercase fw-bold">Grupo de Wem: </span> 
                         <span class="text-primary"> {{ $hombre['grupo_name'] }} </span>
@@ -163,9 +163,6 @@
                         <span class="text-primary"> {{ $hombre['barrio_name'] }} </span>
                     </li>
                 </ul>
-                {{-- <div class="card-body">
-                  <a href="#" class="btn btn-primary">Editar</a>
-                </div> --}}
               </div>
         </div>
     </div>

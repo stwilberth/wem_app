@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class FormAsistencia extends Model
 {
     use HasFactory;
+
+    public function hombres()
+    {
+    }
 }

@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Livewire\Hombre;
+use Carbon\Carbon;
 use App\Models\Hombre;
 use Livewire\Component;
+use App\Models\FormAsistencia;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -49,7 +51,16 @@ class Show extends Component
         )
         ->where('hombres.id', $this->hombre_id)
         ->first();
+
         $this->hombre = (array)$hombre;
+
+        $dateS = new Carbon('first day of this month');
+        $dateE = new Carbon('last day of this month');
+        $this->hombre['asistencias'] = FormAsistencia::where('hombre_id', $this->hombre_id)->whereBetween('created_at', [$dateS->format('Y-m-d')." 00:00:00", $dateE->format('Y-m-d')." 23:59:59"])->count();
+
+        $date2S = new Carbon('first day of last month');
+        $date2E = new Carbon('last day of last month');
+        $this->hombre['asistencias_anterior'] = FormAsistencia::where('hombre_id', $this->hombre_id)->whereBetween('created_at', [$date2S->format('Y-m-d')." 00:00:00", $date2E->format('Y-m-d')." 23:59:59"])->count();
 
     }
 

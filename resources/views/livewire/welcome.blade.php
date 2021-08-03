@@ -3,54 +3,60 @@
 
   <div class="row" style="height: 300px">
       <div class="col d-flex justify-content-center align-items-center">
-          <h1>Wem App</h1>
+          <h1 class="fs-1">Wem App</h1>
       </div>
   </div>
     @guest
       @if (!session('hombre_id'))
         <div class="row">
-            <div class="col d-flex justify-content-end">
-                <button type="button" class="btn btn-primary btn-lg" style="margin-right: 50px" data-bs-toggle="modal" data-bs-target="#ingreso">
+            <div class="col-md-3"></div>
+            <div class="col-sm-6 col-md-3 d-flex justify-content-end mt-3">
+                <button type="button" class="btn btn-primary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#ingreso">
                     Ingreso
                 </button>
             </div>
-            <div class="col d-flex justify-content-start">
-                <button type="button" class="btn btn-secondary btn-lg" style="margin-left: 50px" data-bs-toggle="modal" data-bs-target="#registro">
+            <div class="col-sm-6 col-md-3 d-flex justify-content-start mt-3">
+                <button type="button" class="btn btn-secondary btn-lg w-100" data-bs-toggle="modal" data-bs-target="#registro">
                     Registro
                 </button>
             </div>
+            <div class="col-md-3"></div>
         </div>  
       @endif
     @endguest
 
     @if (session()->get('hombre_id'))
         <div class="row">
-          <div class="col">
-            <a href="{{ route('hombre', session()->get('hombre_id')) }}" type="button" class="btn btn-success btn-lg">
+          <div class="col-md-3"></div>
+          <div class="col-sm-6 col-md-3 d-flex justify-content-end mt-3">
+            <a href="{{ route('hombre', session()->get('hombre_id')) }}" type="button" class="btn btn-primary btn-lg w-100">
               Mi Perfil
             </a>
           </div>
-          <div class="col">
-            <button type="button" class="btn btn-success btn-lg" wire:click="logout">
+          <div class="col-sm-6 col-md-3 d-flex justify-content-start mt-3">
+            <button type="button" class="btn btn-secondary btn-lg w-100" wire:click="logout">
               Salir
             </button>
           </div>
+          <div class="col-md-3"></div>
         </div>
     @endif
 
     @auth
       @if (Auth::user()->hasRole(['admin', 'psicologo']))
         <div class="row">
-          <div class="col d-flex justify-content-end">
-            <a href="{{ route('dashboard') }}" type="button" class="btn btn-success btn-lg">
-              Tablero Psicólogo
+          <div class="col-md-3"></div>
+          <div class="col-sm-6 col-md-3 d-flex justify-content-end mt-3">
+            <a href="{{ route('dashboard') }}" type="button" class="btn btn-success btn-lg w-100">
+              Tablero
             </a>
           </div>
-          <div class="col d-flex justify-content-start">
-            <button type="button" class="btn btn-success btn-lg" wire:click="logout">
+          <div class="col-sm-6 col-md-3 d-flex justify-content-start mt-3">
+            <button type="button" class="btn btn-success btn-lg w-100" wire:click="logout">
               Salir
             </button>
           </div>
+          <div class="col-md-3"></div>
         </div>
       @else
       <div class="row">

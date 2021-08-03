@@ -30,8 +30,8 @@ Route::get('/form-asistencia',      App\Http\Livewire\Forms\Asistencia::class)  
 Route::get('/form-primero',         App\Http\Livewire\Forms\PrimeroCtrl::class)         ->name('form-primero');
 Route::get('/form-segundo',         App\Http\Livewire\Forms\SegundoCtrl::class)         ->name('form-segundo');
 Route::get('/form-tercero',         App\Http\Livewire\Forms\TerceroCtrl::class)         ->name('form-tercero');
-Route::get('/hombre/{id}',          App\Http\Livewire\Hombre\Show::class)                      ->name('hombre');
-Route::get('/hombre-edit/{id}',     App\Http\Livewire\Hombre\Show::class)               ->name('hombre');
+Route::get('/hombre/{id}',          App\Http\Livewire\Hombre\Show::class)               ->name('hombre');
+Route::get('/hombre-edit/{id}',     App\Http\Livewire\Hombre\Edit::class)               ->name('hombre-edit');
 Route::get('/hombre-create',        App\Http\Livewire\Hombre\Create::class)             ->name('hombre-create');
 Route::get('/hombre-login',         App\Http\Livewire\Hombre\Login::class)              ->name('hombre-login');
 // Route::prefix('hombre')->group(function (){
