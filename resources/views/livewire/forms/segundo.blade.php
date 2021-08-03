@@ -1,9 +1,9 @@
 <div class="container">
 
     {{-- sesiones insuficientes --}}
-    @if (session('cantidad_sesiones_error'))
+    @if ($cantidad_sesiones_error)
         <div class="alert alert-danger mt-5" role="alert">
-            {{ session('cantidad_sesiones_error') }}
+            {{ $cantidad_sesiones_error }}
         </div>
     @endif
 

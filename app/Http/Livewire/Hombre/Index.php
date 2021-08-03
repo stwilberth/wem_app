@@ -2,10 +2,11 @@
 
 namespace App\Http\Livewire\Hombre;
 
-use Livewire\Component;
-use App\Models\Hombre;
 use App\Models\Grupo;
+use App\Models\Hombre;
+use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Auth;
 
 
 class Index extends Component
@@ -20,7 +21,11 @@ class Index extends Component
 
     public function mount()
     {
-      $this->grupos = Grupo::all();   
+        if (Auth::user()->hasRole(['admin'])) {
+            $this->grupos = Grupo::all();
+        } else {
+            $this->grupos = Auth::user()->grupos;
+        }
     }
 
     public $search = '';

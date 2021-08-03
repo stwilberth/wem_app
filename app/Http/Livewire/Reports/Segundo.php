@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Livewire\Forms;
+namespace App\Http\Livewire\Reports;
 
 use Livewire\Component;
 
-class ResultSegundo extends Component
+class Segundo extends Component
 {
     public function render()
     {
-        return view('livewire.result-segundo')
+        return view('livewire.reports.segundo')
             ->extends('layouts.app')
             ->section('content')
             ->layoutData([

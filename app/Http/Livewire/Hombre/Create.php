@@ -1,18 +1,19 @@
 <?php
 
 namespace App\Http\Livewire\Hombre;
-use Illuminate\Support\Facades\Http;
+use App\Models\Pais;
 
-use Livewire\Component;
-use App\Models\Hombre;
 use App\Models\Grupo;
 use App\Models\Barrio;
-use App\Models\Distrito;
 use App\Models\Canton;
+use App\Models\Hombre;
+use Livewire\Component;
+use App\Models\Distrito;
 use App\Models\Provincia;
-use App\Models\Pais;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class Create extends Component
 {
@@ -91,8 +92,11 @@ class Create extends Component
 
     public function mount(){
 
+        if (Auth::user()) {
+            return redirect()->route('welcome');
+        }
         if (session()->get('hombre_id')) {
-            return redirect()->route('hombre-show');
+            return redirect()->route('hombre', session()->get('hombre_id'));
         }
         $this->grupos = Grupo::all();
         $this->provincias = Provincia::all();
@@ -103,7 +107,7 @@ class Create extends Component
     public function render()
     {
         if (session()->get('hombre_id')) {
-           redirect()->route('hombre-show');
+           redirect()->route('hombre', session()->get('hombre_id'));
         }
 
         $this->paises = Pais::all();
@@ -182,6 +186,7 @@ class Create extends Component
         $this->hombres->form_tercero = 'sin_iniciar';
         $this->hombres->activo = 1;
         $this->hombres->save();
+        $this->hombres->grupos()->attach($this->hombres->grupo_id);
         session(['hombre_id' => $this->hombres->id]);
         session(['hombre_name' => $this->hombres->name]);
         return redirect()->to('/form-primero');

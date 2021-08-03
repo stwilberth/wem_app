@@ -14,13 +14,7 @@ class SegundoCtrl extends Component
     public $was_validated = '';
     public $grupos;
 
-    // ¿A cual grupo de Wem es al que más asiste? *
-    
-    //     'id' => 'tiene_pareja',
-    //     'label' => '¿Tiene pareja en este momento? *',
-
-    //     'id' => 'esta_conviviendo_pareja',
-    //     'label' => '¿Está conviviendo con su pareja?',
+    public $cantidad_sesiones_error = '';
 
     public $preguntas = array(
         [// ¿Cuál es tu estado civil? *
@@ -359,7 +353,7 @@ class SegundoCtrl extends Component
                     $this->FormSegundo ??= FormSegundo::where('hombre_id', $this->hombre_id)->firstOrFail();
                 }
             } else {
-                session()->flash('cantidad_sesiones_error', 'Tiene que tener de 15 a 20 sesiones para llenar este formulario');
+                $this->cantidad_sesiones_error = 'Tiene que tener de 15 a 20 sesiones para llenar este formulario';
             }
             
         }
@@ -388,9 +382,6 @@ class SegundoCtrl extends Component
         $this->FormSegundo->save();
         $this->Hombre->form_segundo = 'finalizado';
         $this->Hombre->save();
-        return redirect()->to('/hombre-show');
+        return redirect()->route('hombre', $this->Hombre->id);
     }
-
-    //barilla 3/8 3600
-    //barilla  1775
 }

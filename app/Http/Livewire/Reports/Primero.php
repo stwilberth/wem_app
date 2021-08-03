@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Livewire\Forms;
+namespace App\Http\Livewire\Reports;
 
 use Livewire\Component;
 use Livewire\WithPagination;
 use DB;
 
-class ResultPrimero extends Component
+class Primero extends Component
 {
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
@@ -26,7 +26,7 @@ class ResultPrimero extends Component
 
             // dd($this->resultados);
 
-        return view('livewire.result-primero')
+        return view('livewire.reports.primero')
             ->extends('layouts.app')
             ->section('content')
             ->layoutData([

@@ -41,6 +41,10 @@ class Index extends Component
                 ->paginate(20);
         }
 
+        foreach ($users as $user) {
+         $user->roles = $user->getRoleNames();
+        }
+
         return view('livewire.users.index', ['users' => $users])
         ->extends('layouts.app')
         ->section('content')

@@ -23,7 +23,7 @@ class CreateHombresTable extends Migration
             $table->string('name')->nullable();
             $table->string('email')->unique()->nullable();
             $table->boolean('activo')->nullable(1);
-            $table->string('telefono')->unique()->nullable();             // Digite su número de teléfono,
+            $table->string('telefono')->nullable();             // Digite su número de teléfono,
             $table->boolean('wem_jovenes')->nullable();         // Wem jovenes,
 
             $table->boolean('tiene_pareja')              ->nullable(); //radio_boolean
@@ -42,7 +42,6 @@ class CreateHombresTable extends Migration
             $table->string('ocupacion')->nullable();            // ¿Cuál es su ocupación?,
             $table->string('nacionalidad')->nullable();         // ¿Cuál es su nacionalidad?,
             $table->integer('total_sesiones')->nullable();      // Cantidad de sesiones de venir a Wem (digite un número),
-            $table->integer('asistencias')->nullable();         // Cantidad de asistencias obligatovias, permite reestablecer en 0,
             $table->integer('provincia')->nullable();           // Provincia,
             $table->integer('canton')->nullable();              // Cantón,
             $table->integer('distrito')->nullable();            // Distrito,

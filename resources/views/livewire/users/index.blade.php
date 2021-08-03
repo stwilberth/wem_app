@@ -1,11 +1,6 @@
 <div class="row">
     <div class="col">
 
-        <x-alert_warning :lista="array(
-            'mostrar el tipo de usuario',
-            'ver'
-        )" />
-
         <div class="card mt-5">
             {{-- header --}}
             <div class="card-header">

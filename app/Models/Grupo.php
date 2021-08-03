@@ -18,4 +18,14 @@ class Grupo extends Model
         'ubicacion',
         'horario',
     ];
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
+
+    public function hombres()
+    {
+        return $this->belongsToMany(Hombre::class);
+    }
 }

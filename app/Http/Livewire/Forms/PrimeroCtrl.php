@@ -417,6 +417,6 @@ class PrimeroCtrl extends Component
         $this->FormPrimero->save();
         $this->Hombre->form_primero = 'finalizado';
         $this->Hombre->save();
-        return redirect()->to('/hombre-show');
+        return redirect()->route('hombre', $this->hombre_id);
     }
 }

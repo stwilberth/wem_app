@@ -41,4 +41,8 @@ class Hombre extends Model
     {
         return $this->hasOne(FormPrimero::class);
     }
+    public function grupos()
+    {
+        return $this->belongsToMany(Grupo::class);
+    }
 }

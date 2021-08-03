@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Dashboard;
 
 use Livewire\Component;
 
-class Psicologo extends Component
+class Psico extends Component
 {
     public function render()
     {
@@ -12,6 +12,7 @@ class Psicologo extends Component
             ->extends('layouts.app')
             ->section('content')
             ->layoutData([
-                'titulo' => 'Tablero Psicólogo']);
-    }
+                'titulo' => 'Tablero'
+            ]);
+        }
 }

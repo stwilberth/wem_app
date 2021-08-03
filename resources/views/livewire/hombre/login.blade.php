@@ -7,10 +7,12 @@
                         <h4>Ingresar</h4>
                     </div>
                     <div class="card-body">
+                        
                         <div class="mb-3">
                             <label for="dni" class="form-label">DNI</label>
                             <input type="text" class="form-control" id="dni" wire:model='dni'>
                         </div>
+
                         <div class="mb-3">
                             <label for="pin" class="form-label">PIN</label>
                             <input type="number" class="form-control" id="pin" wire:model='pin'>

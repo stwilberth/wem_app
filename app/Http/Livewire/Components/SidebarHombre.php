@@ -3,23 +3,15 @@
 namespace App\Http\Livewire\Components;
 
 use Livewire\Component;
-use Illuminate\Support\Facades\Auth;
 
-class NavBar extends Component
+class SidebarHombre extends Component
 {
     public function render()
     {
-        return view('livewire.components.nav-bar');
+        return view('livewire.components.sidebar-hombre');
     }
 
     public function logout()
-    {
-        Auth::logout();
-        return redirect()->route('welcome');
-
-    }
-
-    public function logoutHombre()
     {
         session()->forget('hombre_id');
         return redirect()->route('welcome');

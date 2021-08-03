@@ -43,7 +43,8 @@ class ConexionHombre extends Migration
 
         Schema::table('form_asistencias', function (Blueprint $table) {
             $table->foreignId('hombre_id')->constrained();  
-            $table->foreignId('grupo_id')->constrained()->nullable();  
+            $table->foreignId('grupo_id')->constrained();  
+            $table->foreignId('user_id')->constrained(); //psicologo
         });
 
     }

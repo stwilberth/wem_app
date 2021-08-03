@@ -2,16 +2,25 @@
 
 namespace App\Http\Livewire\Grupos;
 
-use Livewire\Component;
 use App\Models\Grupo;
+use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class Index extends Component
 {
+    public $titulo;
     public $grupos;
     public ?Grupo $grupo = null;
 
+
     public function mount(){
-        $this->grupos = Grupo::all();
+        if (Auth::user()->hasRole(['admin'])) {
+            $this->grupos = Grupo::all();
+            $this->titulo = 'Grupos';
+        } else {
+            $this->titulo = 'Mis Grupos';
+            $this->grupos = Auth::user()->grupos;
+        }
     }
 
     public function render()
@@ -19,7 +28,7 @@ class Index extends Component
         return view('livewire.grupos.index')
         ->extends('layouts.app')
         ->section('content')
-        ->layoutData(['titulo' => 'Grupos']);
+        ->layoutData(['titulo' => $this->titulo]);
     }
 
 }

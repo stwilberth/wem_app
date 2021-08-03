@@ -15,7 +15,7 @@ class CreateFormAsistenciasTable extends Migration
     {
         Schema::create('form_asistencias', function (Blueprint $table) {
             $table->id();
-            $table->integer('total');
+            $table->enum('modalidad', ['virtual', 'presencial']);
             $table->timestamps();
         });
     }

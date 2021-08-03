@@ -1,5 +1,29 @@
 <div class="container">
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
+
+    @if (session('asistencia_guardada'))
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-success" role="alert">
+                    <strong>
+                        {{ session('asistencia_guardada') }}
+                    </strong>
+                </div>
+            </div>
+        </div>
+    @endif
+
+    @if (session('asistencia_duplicada'))
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-danger" role="alert">
+                <strong>
+                    {{ session('asistencia_duplicada') }}
+                </strong>
+            </div>
+        </div>
+    </div>
+@endif
+
     <div class="row">
         <div class="col">
             <div class="card mt-5">
