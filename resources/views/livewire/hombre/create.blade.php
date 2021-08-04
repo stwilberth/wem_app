@@ -1,6 +1,6 @@
 <div class="container">
 
-    <form wire:submit.prevent="save" class="bg-white p-5 row needs-validation {{ $was_validated }}" novalidate>
+    <form wire:submit.prevent="save" id="create" class="bg-white p-5 row needs-validation {{ $was_validated }}" novalidate>
 
         @if ($estado == 'editar_dni' || $estado == '404')
             <!-- dni -->
@@ -341,7 +341,10 @@
 
             <!-- guardar -->
             <div class="mb-5">
-                <button class="btn btn-primary" type="submit">Guardar</button>
+                <button  type="submit" class="btn btn-primary g-recaptcha" 
+                data-sitekey="6Lc4bKQZAAAAABQjo7NnmrLE8x3D9f1mEaWuiJhf" 
+                data-callback='onSubmit'>
+                Guardar</button>
             </div>
 
             @if ($was_validated)
@@ -351,5 +354,14 @@
         @endif
 
     </form>
+
+    @section('script')
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            function onSubmit(token) {
+                document.getElementById("create").submit();
+            }
+        </script>
+    @endsection
 
 </div>
