@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 //admin pages
 Route::group(['middleware' => ['role:admin']], function () {  
