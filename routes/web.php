@@ -66,7 +66,13 @@ Route::get('/view-clear', function() {
 });
 
 // Clear view cache:
-Route::get('/view-clear', function() {
+Route::get('/optimeze-clear', function() {
     $exitCode = Artisan::call('optimize:clear');
     return 'optimize:clear';
+});
+
+// Clear view cache:
+Route::get('/key-generate', function() {
+    $exitCode = Artisan::call('key:generate');
+    return $exitCode;
 });
