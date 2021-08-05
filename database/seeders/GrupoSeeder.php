@@ -15,19 +15,19 @@ class GrupoSeeder extends Seeder
     public function run()
     {
         $groups = [
-            ['name' => 'Alajuela Centro'],
-            ['name' => 'San Pedro de Montes de Oca'],
-            ['name' => 'Curridabat'],
-            ['name' => 'Tibás'],
-            ['name' => 'Escazú'],
-            ['name' => 'Puriscal'],
-            ['name' => 'Grecia'],
-            ['name' => 'Heredia Centro'],
-            ['name' => 'San Pablo de Heredia'],
-            ['name' => 'San Rafael de Heredia'],
-            ['name' => 'Belén'],
-            ['name' => 'Esparza'],
-            ['name' => 'Pérez Zeledón'],
+            ['activo' => 1, 'name' => 'Alajuela Centro'],
+            ['activo' => 1, 'name' => 'San Pedro de Montes de Oca'],
+            ['activo' => 1, 'name' => 'Curridabat'],
+            ['activo' => 1, 'name' => 'Tibás'],
+            ['activo' => 1, 'name' => 'Escazú'],
+            ['activo' => 1, 'name' => 'Puriscal'],
+            ['activo' => 1, 'name' => 'Grecia'],
+            ['activo' => 1, 'name' => 'Heredia Centro'],
+            ['activo' => 1, 'name' => 'San Pablo de Heredia'],
+            ['activo' => 1, 'name' => 'San Rafael de Heredia'],
+            ['activo' => 1, 'name' => 'Belén'],
+            ['activo' => 1, 'name' => 'Esparza'],
+            ['activo' => 1, 'name' => 'Pérez Zeledón'],
 
         ];
 

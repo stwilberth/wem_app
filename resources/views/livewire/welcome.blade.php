@@ -52,7 +52,7 @@
             </a>
           </div>
           <div class="col-sm-6 col-md-3 d-flex justify-content-start mt-3">
-            <button type="button" class="btn btn-success btn-lg w-100" wire:click="logout">
+            <button type="button" class="btn btn-secondary btn-lg w-100" wire:click="logout">
               Salir
             </button>
           </div>

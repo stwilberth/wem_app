@@ -1,0 +1,11 @@
+filtrar los grupos no activos
+que vamos hacer con los datos actuales
+no muestra cuando hay un error en guardar en create hombre
+
+fecha mas amigable
+
+label mas Oscuro en el formulario create hombre
+
+separar los registros hombre psicologo
+
+login hombre no sirve
